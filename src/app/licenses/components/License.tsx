@@ -2,8 +2,18 @@ import React from "react";
 import Image from "next/image";
 import license from "@/app/licenses/assets/num.png";
 
+interface LicenseType {
+  country: string;
+  plateType: string;
+  letters: string;
+  numbers: string;
+  city: string;
+  price: string;
+  date: string;
+}
+
 const License = () => {
-  const licenses = Array.from({ length: 20 }, (_, index) => ({
+  const licenses: LicenseType[] = Array.from({ length: 15 }, () => ({
     country: "مصر",
     plateType: "EGYPT",
     letters: "د ر ش",
